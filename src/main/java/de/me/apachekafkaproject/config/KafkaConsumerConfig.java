@@ -34,6 +34,6 @@ public class KafkaConsumerConfig {
     }
     @KafkaListener(topics = "books", groupId = "book-notification-consumer", concurrency = "2")
     public void bookNotificationConsumer(BookEvent event) {
-        logger.info("Books event received for notification => {}", event);
+        System.out.println("Books event received for notification => {} " + event);
     }
 }
